@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Defense = () => {
-  return (
-    <div id="defense">Defense</div>
-  );
+    return (
+        <div>Defense</div>
+    );
 };
 
 export default Defense;

@@ -16,14 +16,7 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "paths": {
-            "@/*": [
-                "./src/*"
-            ],
-            "@c/*": [
-                "./src/components/*"
-            ]
-        },
+        "baseUrl": "./src",
         "allowJs": true,
         "skipLibCheck": true,
         "noEmit": true,
