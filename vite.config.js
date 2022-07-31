@@ -4,6 +4,12 @@ import prerender from "vite-plugin-prerender";
 import path from "path";
 
 export default defineConfig({
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+            "@c": path.resolve(__dirname, "./src/components"),
+        }
+    },
     plugins: [
         react(),
         prerender({

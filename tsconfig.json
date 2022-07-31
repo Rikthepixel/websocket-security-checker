@@ -13,6 +13,14 @@
         "jsx": "react",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
-        "strict": true
-    }
+        "strict": true,
+        "paths": {
+            "@/*": [
+                "./src/*",
+            ],
+            "@c": [
+                "./src/components/*"
+            ]
+        }
+    },
 }
