@@ -1,6 +1,7 @@
 {
     "include": [
-        "./src/**/*.*"
+        "./src/**/*.*",
+        "./pages/**/*.*"
     ],
     "compilerOptions": {
         "lib": [
@@ -8,19 +9,29 @@
             "DOM.Iterable",
             "ESNext"
         ],
+        "module": "ESNext",
         "moduleResolution": "Node",
         "target": "ESNext",
-        "jsx": "react",
+        "jsx": "preserve",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
         "paths": {
             "@/*": [
-                "./src/*",
+                "./src/*"
             ],
-            "@c": [
+            "@c/*": [
                 "./src/components/*"
             ]
-        }
+        },
+        "allowJs": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        "incremental": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true
     },
+    "exclude": [
+        "node_modules"
+    ]
 }
