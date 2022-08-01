@@ -3,16 +3,31 @@ import { ChakraProvider } from '@chakra-ui/provider';
 import type { AppProps } from "next/app";
 import Head from 'next/head';
 
-const App = ({ Component, pageProps }: AppProps) => (
-    <>
+const getPageName = (pathName: string): string => {
+    const pathParts = pathName.split("/");
+    const endpoint = pathParts[pathParts.length - 1];
+    const pageNameParts = endpoint.split("_");
+
+    const firstWord = pageNameParts[0];
+    pageNameParts[0] = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
+
+    return pageNameParts.join(" ");
+};
+
+const App = ({ Component, router, pageProps }: AppProps) => {
+
+    const pageName = getPageName(router.pathname);
+    const title = `WS Sec-Checker${pageName ? " · " : ""}${pageName}`;
+
+    return <>
         <Head>
-            <title>WS Checker</title>
-            <meta property="og:title" content="WS Checker" key="title" />
+            <title>{title}</title>
+            <meta property="og:title" content={title} key="title" />
         </Head>
         <ChakraProvider>
             <Component {...pageProps} />
         </ChakraProvider>
-    </>
-);
+    </>;
+};
 
 export default App;
