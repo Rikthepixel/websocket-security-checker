@@ -12,5 +12,5 @@ module.exports = {
             path.join(__dirname, "styles")
         ]
     },
-
+    poweredByHeader: false
 };
