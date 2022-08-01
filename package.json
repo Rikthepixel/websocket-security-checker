@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "author": "RikThePixel",
+  "homepage": "https://www.rikdenbreejen.nl/websocket-security-checker",
   "scripts": {
     "start": "next dev",
     "build": "next build && next export -o ./dist",
+    "postbuild:cname": "node ./builders/cname.js",
+    "postbuild": "npm run postbuild:cname",
     "preview": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",

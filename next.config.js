@@ -5,12 +5,12 @@ const path = require("path");
  */
 module.exports = {
     distDir: "node_modules/.next",
-    basePath: "/cswsh-checker",
+    basePath: "/websocket-security-checker",
     reactStrictMode: true,
     sassOptions: {
         includePaths: [
             path.join(__dirname, "styles")
         ]
     },
-    
+
 };
