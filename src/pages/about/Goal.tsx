@@ -2,7 +2,7 @@ import React from 'react';
 
 const Goal = () => {
     return (
-        <div>Goal</div>
+        <div>Work in progress</div>
     );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Defense = () => {
     return (
-        <div>Defense</div>
+        <div>Work in progress</div>
     );
 };
 

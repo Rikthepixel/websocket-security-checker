@@ -2,7 +2,7 @@ import React from 'react'
 
 const TermsOfService = () => {
   return (
-    <div>tos</div>
+    <div>Work in progress</div>
   )
 }
 

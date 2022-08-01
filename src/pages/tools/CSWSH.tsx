@@ -2,7 +2,7 @@ import React from 'react';
 
 const CSWSH = () => {
     return (
-        <div>cswsh</div>
+        <div>Work in progress</div>
     );
 };
 
