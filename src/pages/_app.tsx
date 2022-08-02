@@ -4,8 +4,7 @@ import type { AppProps } from "next/app";
 import Head from 'next/head';
 
 const getPageName = (pathName: string): string => {
-    const pathParts = pathName.split("/");
-    const endpoint = pathParts[pathParts.length - 1];
+    const endpoint = pathName.split("/").pop() ?? "";
     const pageNameParts = endpoint.split("_");
 
     const firstWord = pageNameParts[0];
