@@ -17,7 +17,7 @@ const getPageName = (pathName: string): string => {
 const App = ({ Component, router, pageProps }: AppProps) => {
 
     const pageName = getPageName(router.pathname);
-    const title = `WS Sec-Checker${pageName ? " · " : ""}${pageName}`;
+    const title = `${pageName ? `${pageName} · ` : ""}WS Sec-Check`;
 
     return <>
         <Head>
