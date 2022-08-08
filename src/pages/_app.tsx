@@ -1,17 +1,10 @@
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/provider';
-import type { AppProps } from "next/app";
+import { theme } from '@chakra-ui/theme';
+import getPageName from "utils/getPageName";
 import Head from 'next/head';
 
-const getPageName = (pathName: string): string => {
-    const endpoint = pathName.split("/").pop() ?? "";
-    const pageNameParts = endpoint.split("_");
-
-    const firstWord = pageNameParts[0];
-    pageNameParts[0] = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
-
-    return pageNameParts.join(" ");
-};
+import type { AppProps } from "next/app";
 
 const App = ({ Component, router, pageProps }: AppProps) => {
 
@@ -23,7 +16,7 @@ const App = ({ Component, router, pageProps }: AppProps) => {
             <title>{title}</title>
             <meta property="og:title" content={title} key="title" />
         </Head>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
             <Component {...pageProps} />
         </ChakraProvider>
     </>;
