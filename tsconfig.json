@@ -1,8 +1,12 @@
 {
     "include": [
         "./src/**/*.*",
-        "./types/**/*.*"
+        "./types/**/*.*",
+        "./next-env.d.ts"
     ],
+    "exclude": [
+        "node_modules"
+    ]
     "compilerOptions": {
         "lib": [
             "DOM",
@@ -24,7 +28,4 @@
         "resolveJsonModule": true,
         "isolatedModules": true
     },
-    "exclude": [
-        "node_modules"
-    ]
 }
